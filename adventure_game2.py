@@ -1,5 +1,5 @@
 import time
-
+import random
 
 def print_messages(message):
     print(message)
@@ -29,8 +29,9 @@ def valid_answer(answer, option1, option2):
 
 
 def begin_adventure():
-    response = valid_answer("You wake up in a dark forest, not sure how you got there."
-        "Do you STAY where you are or do you EXPLORE?\n",
+    random_setting = ["dark", "wet", "cursed", "scary"]
+    response = valid_answer("You wake up in a " + random.choice(random_setting) + " forest, not sure how you got there."
+        " Do you STAY where you are or do you EXPLORE?\n",
          "explore", "stay" )
     if "stay" in response:
         print_messages("Uh oh! You've been eaten by a monster :( ")

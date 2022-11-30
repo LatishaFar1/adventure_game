@@ -3,7 +3,7 @@ import time
 
 def print_messages(message):
     print(message)
-    time.sleep(1)
+    time.sleep(2.5)
 
 
 
